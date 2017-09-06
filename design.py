@@ -52,7 +52,7 @@ class Ui_MainWindow(object):
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Window, brush)
         MainWindow.setPalette(palette)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(_fromUtf8("images/icon-kat.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8("../../.designer/backup/images/icon-kat.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QtGui.QWidget(MainWindow)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
@@ -104,9 +104,7 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.lineEdit.setFont(font)
         self.lineEdit.setStyleSheet(_fromUtf8("border-top : 0px;\n"
-"font: 12pt \"Roboto\";\n"
 "border-bottom: 2px solid #5bceff;\n"
-"font: 12pt \"Roboto\";\n"
 "background-color:white;"))
         self.lineEdit.setText(_fromUtf8(""))
         self.lineEdit.setObjectName(_fromUtf8("lineEdit"))
@@ -202,10 +200,25 @@ class Ui_MainWindow(object):
         self.labelPath.setFont(font)
         self.labelPath.setAutoFillBackground(True)
         self.labelPath.setObjectName(_fromUtf8("labelPath"))
+        self.loadingScreen = QtGui.QWidget(self.centralwidget)
+        self.loadingScreen.setGeometry(QtCore.QRect(0, 0, 601, 431))
+        self.loadingScreen.setStyleSheet(_fromUtf8("background-color:white;"))
+        self.loadingScreen.setObjectName(_fromUtf8("loadingScreen"))
+        self.label_2 = QtGui.QLabel(self.loadingScreen)
+        self.label_2.setGeometry(QtCore.QRect(160, 60, 281, 241))
+        self.label_2.setObjectName(_fromUtf8("label_2"))
+        self.label_4 = QtGui.QLabel(self.loadingScreen)
+        self.label_4.setGeometry(QtCore.QRect(210, 310, 141, 41))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Roboto"))
+        font.setPointSize(16)
+        self.label_4.setFont(font)
+        self.label_4.setObjectName(_fromUtf8("label_4"))
         self.labelPath.raise_()
         self.textBrowser.raise_()
         self.label.raise_()
         self.lineEdit.raise_()
+        self.loadingScreen.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -222,4 +235,7 @@ class Ui_MainWindow(object):
         self.lineEdit.setPlaceholderText(_translate("MainWindow", "Type a message or a command", None))
         self.label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">Kat - v1.0</p></body></html>", None))
         self.labelPath.setText(_translate("MainWindow", "<html><head/><body><p>Root &gt; DUT</p></body></html>", None))
+        self.label_2.setText(_translate("MainWindow", "<html><head/><body><p><img src=\":/newPrefix/loading-kat.png\"/></p></body></html>", None))
+        self.label_4.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">Loading</p></body></html>", None))
 
+import images_rc

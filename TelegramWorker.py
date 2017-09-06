@@ -15,7 +15,9 @@ class TelegramWorker(QtCore.QObject):
 	# sent when partner username is needed
 	reqPartner = QtCore.pyqtSignal()
 	# sent when verification is needed
-	reqVerify = QtCore.pyqtSignal()		
+	reqVerify = QtCore.pyqtSignal()
+	# sent when initialisation is done
+	loadingFinished = QtCore.pyqtSignal()	
 
 	# SETUP
 
@@ -59,6 +61,8 @@ class TelegramWorker(QtCore.QObject):
 			self.loadPartner()
 		else:
 			self.reqVerify.emit()
+		
+		self.loadingFinished.emit()
 
 	def newMessageHandler(self,update):
 		if isinstance(update, UpdateShortMessage):

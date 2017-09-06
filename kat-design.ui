@@ -85,7 +85,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>images/icon-kat.png</normaloff>images/icon-kat.png</iconset>
+    <normaloff>../../.designer/backup/images/icon-kat.png</normaloff>../../.designer/backup/images/icon-kat.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">
@@ -191,9 +191,7 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="styleSheet">
      <string notr="true">border-top : 0px;
-font: 12pt &quot;Roboto&quot;;
 border-bottom: 2px solid #5bceff;
-font: 12pt &quot;Roboto&quot;;
 background-color:white;</string>
     </property>
     <property name="text">
@@ -483,10 +481,56 @@ background-color:white;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Root &amp;gt; DUT&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
+   <widget class="QWidget" name="loadingScreen" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>601</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:white;</string>
+    </property>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>60</y>
+       <width>281</width>
+       <height>241</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/newPrefix/loading-kat.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>310</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Loading&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </widget>
    <zorder>labelPath</zorder>
    <zorder>textBrowser</zorder>
    <zorder>label</zorder>
    <zorder>lineEdit</zorder>
+   <zorder>loadingScreen</zorder>
   </widget>
  </widget>
  <tabstops>
@@ -494,7 +538,7 @@ background-color:white;</string>
   <tabstop>textBrowser</tabstop>
  </tabstops>
  <resources>
-  <include location="images/resource-images"/>
+  <include location="images/images.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -34,6 +34,7 @@ class KatApp(QtGui.QMainWindow, design.Ui_MainWindow):
 		self.telegramWorker.setReady.connect(self.onReady)
 		self.telegramWorker.reqPartner.connect(self.onPartnerRequest)
 		self.telegramWorker.reqVerify.connect(self.onVerifyRequest)
+		self.telegramWorker.loadingFinished.connect(self.onLoadingFinished)
 
 		# assign telegramWorker to seperate thread
 		self.telegramWorker.moveToThread(self.workerThread)
@@ -41,6 +42,9 @@ class KatApp(QtGui.QMainWindow, design.Ui_MainWindow):
 
 		# initialse telegram worker
 		QtCore.QMetaObject.invokeMethod(self.telegramWorker, 'initialise')
+
+		# assign event handler to input text changes
+		self.lineEdit.textChanged.connect(self.onInputTextChange)
 
 	# SIGNAL HANDLERS
 
@@ -58,6 +62,9 @@ class KatApp(QtGui.QMainWindow, design.Ui_MainWindow):
 		self.setupComplete = True
 		self.consoleWrite('system','ready to send')
 		self.consoleWrite('system','type help for command index')
+
+	def onLoadingFinished(self):
+		self.loadingScreen.setVisible(False)
 
 	# COMMAND FUNCTIONS
 
@@ -108,19 +115,33 @@ class KatApp(QtGui.QMainWindow, design.Ui_MainWindow):
 		frameGm.moveCenter(centerPoint)
 		self.move(frameGm.topLeft())
 
+	# capture input text changed event
+	def onInputTextChange(self):
+		# check if current input text is a command
+		# TODO een label boven het input vak laten verschijnen met tips voor gebruik van de functie
+		inputText = self.lineEdit.text()
+		possibleCommand = inputText.split(' ')[0]
+		if possibleCommand in self.commands:
+			# set bold
+			font = self.lineEdit.font()
+			font.setBold(True)
+			self.lineEdit.setFont(font)
+		else:
+			# unset bold
+			font = self.lineEdit.font()
+			font.setBold(False)
+			self.lineEdit.setFont(font)
+
+
 	# capture key presses
 	def keyPressEvent(self, e):
-		# TODO maak tekstveld bold als hij herkent dat je een command bent aan het typen
-		# self.lineEdit.font().setBold(True) # TODO bold is een probleem omdat roboto bold een ander font is
-		# je kunt zelfs een label boven het input vak laten verschijnen met tips voor gebruik van de functie
-
 		# ESC = quit
 		if e.key() == QtCore.Qt.Key_Escape:
 			self.closeApp()
 
 		# ENTER = send message | execute command
 		if e.key() == 16777220 or e.key() == QtCore.Qt.Key_Enter: # two different enter keys on keyboard
-			
+
 			inputText = self.lineEdit.text()
 			self.processMessage('out',inputText)
 				
