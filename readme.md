@@ -1,7 +1,8 @@
 # Kat
 Kat is a layered chat application built upon [telegram](https://telegram.org/). 
 
-<img style="width:100%;" src="/screenshot.png">
+![Kat screenshot](screenshot.png)
+
 *A screenshot of Kat running on ubuntu*
 
 ## Dependencies
