@@ -228,9 +228,9 @@ def main():
 	win.setWindowFlags(win.windowFlags() | QtCore.Qt.FramelessWindowHint)
 
 	# load fonts
-	print(QtGui.QFontDatabase.addApplicationFont(':/fonts/fonts/Lato-Regular.ttf'))
-	print(QtGui.QFontDatabase.addApplicationFont(':/fonts/fonts/Roboto-Regular.ttf'))
-	print(QtGui.QFontDatabase.addApplicationFont(':/fonts/fonts/Roboto-Bold.ttf'))
+	QtGui.QFontDatabase.addApplicationFont(':/fonts/fonts/Lato-Regular.ttf')
+	QtGui.QFontDatabase.addApplicationFont(':/fonts/fonts/Roboto-Regular.ttf')
+	QtGui.QFontDatabase.addApplicationFont(':/fonts/fonts/Roboto-Bold.ttf')
 
 	# show window
 	win.show()
