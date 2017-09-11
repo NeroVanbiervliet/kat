@@ -1,5 +1,0 @@
-<RCC>
-  <qresource prefix="newPrefix">
-    <file>loading-kat.png</file>
-  </qresource>
-</RCC>

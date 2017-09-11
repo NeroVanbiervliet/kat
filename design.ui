@@ -84,8 +84,8 @@
    <string>Kat</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>../../.designer/backup/images/icon-kat.png</normaloff>../../.designer/backup/images/icon-kat.png</iconset>
+   <iconset resource="resources.qrc">
+    <normaloff>:/images/images/icon-kat.png</normaloff>:/images/images/icon-kat.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">
@@ -482,6 +482,9 @@ background-color:white;</string>
     </property>
    </widget>
    <widget class="QWidget" name="loadingScreen" native="true">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -503,7 +506,7 @@ background-color:white;</string>
       </rect>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/newPrefix/loading-kat.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/images/images/loading-kat.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_4">
@@ -538,7 +541,7 @@ background-color:white;</string>
   <tabstop>textBrowser</tabstop>
  </tabstops>
  <resources>
-  <include location="images/images.qrc"/>
+  <include location="resources.qrc"/>
  </resources>
  <connections/>
 </ui>

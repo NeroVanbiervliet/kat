@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="images">
+    <file>images/loading-kat.png</file>
+    <file>images/icon-kat.png</file>
+  </qresource>
+  <qresource prefix="fonts">
+    <file>fonts/Lato-Regular.ttf</file>
+    <file>fonts/Roboto-Bold.ttf</file>
+    <file>fonts/Roboto-Regular.ttf</file>
+  </qresource>
+</RCC>

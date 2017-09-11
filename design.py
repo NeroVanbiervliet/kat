@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'kat-design.ui'
+# Form implementation generated from reading ui file 'design.ui'
 #
 # Created by: PyQt4 UI code generator 4.11.4
 #
@@ -52,7 +52,7 @@ class Ui_MainWindow(object):
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Window, brush)
         MainWindow.setPalette(palette)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(_fromUtf8("../../.designer/backup/images/icon-kat.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8(":/images/images/icon-kat.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QtGui.QWidget(MainWindow)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
@@ -201,6 +201,7 @@ class Ui_MainWindow(object):
         self.labelPath.setAutoFillBackground(True)
         self.labelPath.setObjectName(_fromUtf8("labelPath"))
         self.loadingScreen = QtGui.QWidget(self.centralwidget)
+        self.loadingScreen.setEnabled(True)
         self.loadingScreen.setGeometry(QtCore.QRect(0, 0, 601, 431))
         self.loadingScreen.setStyleSheet(_fromUtf8("background-color:white;"))
         self.loadingScreen.setObjectName(_fromUtf8("loadingScreen"))
@@ -235,7 +236,7 @@ class Ui_MainWindow(object):
         self.lineEdit.setPlaceholderText(_translate("MainWindow", "Type a message or a command", None))
         self.label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">Kat - v1.0</p></body></html>", None))
         self.labelPath.setText(_translate("MainWindow", "<html><head/><body><p>Root &gt; DUT</p></body></html>", None))
-        self.label_2.setText(_translate("MainWindow", "<html><head/><body><p><img src=\":/newPrefix/loading-kat.png\"/></p></body></html>", None))
+        self.label_2.setText(_translate("MainWindow", "<html><head/><body><p><img src=\":/images/images/loading-kat.png\"/></p></body></html>", None))
         self.label_4.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">Loading</p></body></html>", None))
 
-import images_rc
+import resources_rc

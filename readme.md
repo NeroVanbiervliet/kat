@@ -7,5 +7,5 @@ A layered chat application
 * telethon
 
 ## Development
-Updating the design can be done using the QtDesigner visual editor. Updating the .py file: `pyuic4 kat-design.ui -o design.py`. Updating the image resources: `pyrcc4 -py3 images/images.qrc -o images_rc.py`. 
+Updating the design can be done using the QtDesigner visual editor. Updating the .py file: `pyuic4 design.ui -o design.py`. Updating the image resources: `pyrcc4 -py3 resources.qrc -o resources_rc.py`. 
 

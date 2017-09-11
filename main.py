@@ -5,7 +5,11 @@ import os  # For listing directory methods
 from TelegramWorker import TelegramWorker
 from inspect import signature
 
+
+# TODO cl en nl als die binnenkomen accept maken
+# TODO partner command niet repliceren
 # TODO KatApp in aparte file steken? 
+# TODO mark as read op mobile als kat open is
 class KatApp(QtGui.QMainWindow, design.Ui_MainWindow):
 	def __init__(self):
 		super(self.__class__, self).__init__()
@@ -222,6 +226,13 @@ def main():
 	app = QtGui.QApplication(sys.argv)
 	win = KatApp()
 	win.setWindowFlags(win.windowFlags() | QtCore.Qt.FramelessWindowHint)
+
+	# load fonts
+	print(QtGui.QFontDatabase.addApplicationFont(':/fonts/fonts/Lato-Regular.ttf'))
+	print(QtGui.QFontDatabase.addApplicationFont(':/fonts/fonts/Roboto-Regular.ttf'))
+	print(QtGui.QFontDatabase.addApplicationFont(':/fonts/fonts/Roboto-Bold.ttf'))
+
+	# show window
 	win.show()
 	app.exec_()
 
