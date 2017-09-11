@@ -1,7 +1,11 @@
 # Kat
-A layered chat application
+Kat is a layered chat application built upon [telegram](https://telegram.org/). 
+
+<img style="width:100%;" src="/screenshot.png">
+*A screenshot of Kat running on ubuntu*
 
 ## Dependencies
+Necessary to run/build from source: 
 * python3
 * PyQt4
 * telethon
